@@ -1,0 +1,21 @@
+{
+  "name": "prisma-basic-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --no-notify --respawn --transpileOnly src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^8.3.2",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "^3.4.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "graphql-yoga": "^1.17.4",
+    "jsonwebtoken": "^8.5.1",
+    "prisma-client-lib": "^1.29.2"
+  }
+}

@@ -1,0 +1,43 @@
+type Query {
+  feed(skip: Int, first: Int): Feed!
+  me: User
+}
+
+type Mutation {
+  createPost(title: String!, body: String!): Post!
+  login(email: String!, password: String!): AuthPayload
+  signUp(name: String!, email: String!, password: String!): AuthPayload
+}
+
+type AuthPayload {
+  user: User!
+  token: String
+}
+
+type Feed {
+  posts: [Post!]!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  posts: [Post!]!
+}
+
+type Post {
+  id: ID!
+  title: String!
+  body: String!
+  postedBy: User
+}
+
+type Like {
+  id: ID!
+  post: Post!
+  user: User!
+}
+
+type Subscription {
+  newPost: Post!
+}
